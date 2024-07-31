@@ -18,10 +18,10 @@ const productSlice = createSlice({
         state.data = action.payload;
         state.status = statusCode.SUCCESS;
     })
-    .addCase(getProducts.pending,(state, action)=>{
+    .addCase(getProducts.pending,(state)=>{
         state.status = statusCode.LOADING;
     })
-    .addCase(getProducts.rejected,(state,action)=>{
+    .addCase(getProducts.rejected,(state)=>{
         state.status =  statusCode.ERROR
 
     })
